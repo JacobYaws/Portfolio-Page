@@ -1,0 +1,174 @@
+* {
+  box-sizing:border-box;
+  }
+
+  :root {
+    --purple: #512888;
+    --grey: #d1d1d1;
+    --white: #fff;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  header {
+    padding: 5px;
+    text-align: left;
+    background: var(--purple);
+    color: var(--white);
+    width: 100%;
+  }
+
+  header ul {
+    text-align: right;
+  }
+
+  header ul li {
+    margin: 1%;
+    list-style: none;
+    display: inline;
+    font-size: 24px;
+  }
+
+  a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .side {
+    flex-basis: 15%;
+    background-color: var(--grey);
+    padding: 20px;
+    text-align: right;
+  }
+
+  .primary {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 85%;
+    background-color: var(--white);
+    padding: 20px;
+   
+  }
+
+  aside h2 {
+    font-size: 32px;
+    color:darkslategray;
+
+  }
+
+  .container1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 85%;
+    background-color: var(--white);
+    padding: 1%;
+    height: 1000px;  
+    justify-content: center;
+  }
+
+  .box1 {
+    border: 3px var(--purple) solid;
+    height: 15%;
+  }
+ 
+ 
+    
+  .box2, .box3, .box4, .box5 {
+    border: 3px var(--purple)  solid ;
+    flex-basis: 42%;
+    height: 15%;
+    background-color: #d1d1d1;   
+    opacity: 0.5; 
+    margin: 10px;
+ }
+   
+
+  #highlight {
+    width: 85%;
+    background-image: url("../images/Horiseon-1.png");
+    height:500px;
+    background-position: center;
+    background-size:cover;
+    margin-bottom: 25px;
+    opacity: 0.5;
+  }
+
+  #highlight:hover {
+    opacity: 1;
+  }
+
+  .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover {
+    opacity: 1;
+    
+
+  }
+   
+  .box1 h2 {
+    position: absolute;
+    color:antiquewhite;
+    margin-top: 325px; 
+    background-color: var(--purple); 
+    border: solid var(--purple) 3px;
+    }
+
+
+
+
+    /*
+  .container header {
+    padding: 20px;
+  }
+ 
+  .container p {
+    text-align: center;
+  }
+      */
+ /*
+  aside {
+    display: flex;
+    width: 20%;
+    justify-content: right;
+    
+  }
+    */
+        /*
+  section{
+    margin-left:25%;
+    display: flex;
+    justify-content: left;
+    width:75%;
+    border-left: 5px hwb(266 9% 43%) solid;
+  }
+      */
+      /*
+      .container img {
+        width: 100%;
+      }
+        */
+
+  /* TODO: Use media query to change the width of the cards so they split into two columns at 992px or smaller*/
+  
+  @media screen and (max-width:992px){
+  .card {
+    width:50%;
+    background-color: red;
+  }
+  }
+  /* TODO: Use media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
+  
+  @media screen and (max-width:768px){
+  .card {
+  width:100%;
+  background-color: blue;
+  }  
+  }
