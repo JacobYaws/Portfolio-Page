@@ -1,5 +1,11 @@
 * {
-    box-sizing: border-box;
+  box-sizing:border-box;
+  }
+
+  :root {
+    --purple: #512888;
+    --grey: #d1d1d1;
+    --white: #fff;
   }
   
   body {
@@ -9,9 +15,9 @@
   
   header {
     padding: 5px;
-    text-align: center;
-    background: #512888;
-    color: #fff;
+    text-align: left;
+    background: var(--purple);
+    color: var(--white);
     width: 100%;
   }
 
@@ -27,7 +33,7 @@
   }
 
   a {
-    color:#fff;
+    color: var(--white);
     text-decoration: none;
   }
 
@@ -37,18 +43,96 @@
   }
 
   .side {
-    flex: 15%;
-    background-color: #D1D1D1;
+    flex-basis: 15%;
+    background-color: var(--grey);
     padding: 20px;
     text-align: right;
   }
 
-  .main {
-    flex: 85%;
-    background-color: white;
-    padding: 20px; 
-    
+  .primary {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 85%;
+    background-color: var(--white);
+    padding: 20px;
+   
   }
+
+  aside h2 {
+    font-size: 32px;
+    color:darkslategray;
+
+  }
+
+  .container1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 85%;
+    background-color: var(--white);
+    padding: 1%;
+    height: 1000px;  
+    justify-content: center;
+  }
+
+  .box1 {
+    border: 3px var(--purple) solid;
+    height: 15%;
+  }
+ 
+ 
+    
+  .box2, .box3, .box4, .box5 {
+    border: 3px var(--purple)  solid ;
+    flex-basis: 42%;
+    height: 15%;
+    background-color: #d1d1d1;   
+    opacity: 0.5; 
+    margin: 10px;
+ }
+   
+
+  #highlight {
+    width: 85%;
+    background-image: url("../images/Horiseon-1.png");
+    height:500px;
+    background-position: center;
+    background-size:cover;
+    margin-bottom: 25px;
+    opacity: 0.5;
+  }
+
+  #highlight:hover {
+    opacity: 1;
+  }
+
+  .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover {
+    opacity: 1;
+    
+
+  }
+   
+  .box1 h2 {
+    position: absolute;
+    color:antiquewhite;
+    margin-top: 325px; 
+    background-color: var(--purple); 
+    border: solid var(--purple) 3px;
+    }
+
+
+
+
+    /*
+  .container header {
+    padding: 20px;
+  }
+ 
+  .container p {
+    text-align: center;
+  }
+      */
  /*
   aside {
     display: flex;
@@ -57,12 +141,7 @@
     
   }
     */
-  aside h2 {
-    font-size: 32px;
-    color:darkslategray;
-
-  }
-    /*
+        /*
   section{
     margin-left:25%;
     display: flex;
@@ -71,27 +150,12 @@
     border-left: 5px hwb(266 9% 43%) solid;
   }
       */
+      /*
+      .container img {
+        width: 100%;
+      }
+        */
 
-  .card {
-    border-style: solid;
-    border-width: 1px;
-    padding: 10px;
-    float: left;
-    width: 25%;
-  }
-  
-  .card header {
-    padding: 20px;
-  }
-  
-  .card p {
-    text-align: center;
-  }
-  
-  .card img {
-    width: 100%;
-  }
-  
   /* TODO: Use media query to change the width of the cards so they split into two columns at 992px or smaller*/
   
   @media screen and (max-width:992px){
