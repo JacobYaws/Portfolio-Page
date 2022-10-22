@@ -13,31 +13,32 @@
     margin: 0;
   }
   
+
   header {
-    padding: 5px;
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background: var(--purple);
     color: var(--white);
     width: 100%;
     height: 100px;
+    justify-content: space-between;
   }
-
+  
   header h1 {
-    position: absolute;
-    display: inline-block;
     text-align: left;
     margin-left: 2%;
     margin-top: 50px;
   }
 
   header ul {
-    position: relative;
     text-align: right;
     margin-top: 55px;
+    margin-right: 50px;
   }
 
   header ul li {
-    margin: 1%;
+    margin: 20px;
     list-style: none;
     display: inline;
     font-size: 24px;
@@ -104,7 +105,7 @@
 
   .box1 h2 {
     position: absolute;
-    color:antiquewhite;
+    color:var(--white);
     margin-top: 325px; 
     background-color: var(--purple); 
     border: solid var(--purple) 3px;
@@ -117,8 +118,17 @@
     background-color: #d1d1d1;   
     opacity: 0.5; 
     margin: 10px;
+    
  }
-   
+
+ .box2 h2, .box3 h2, .box4 h2, .box5 h2 {
+    position: relative;
+    color:var(--white);
+    margin-top: 75px; 
+    background-color: var(--purple); 
+    border: solid var(--purple) 3px;
+    width:162px;
+ }
 
   #highlight {
     width: 85%;
@@ -139,45 +149,7 @@
     
 
   }
-   
-
-
-
-
-
-    /*
-  .container header {
-    padding: 20px;
-  }
- 
-  .container p {
-    text-align: center;
-  }
-      */
- /*
-  aside {
-    display: flex;
-    width: 20%;
-    justify-content: right;
-    
-  }
-    */
-        /*
-  section{
-    margin-left:25%;
-    display: flex;
-    justify-content: left;
-    width:75%;
-    border-left: 5px hwb(266 9% 43%) solid;
-  }
-      */
-      /*
-      .container img {
-        width: 100%;
-      }
-        */
-
-  /* TODO: Use media query to change the width of the cards so they split into two columns at 992px or smaller*/
+  
   
   @media screen and (max-width:992px){
   .row {
@@ -197,11 +169,16 @@
     opacity: 1;
   }
 }
-  /* TODO: Use media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
   
   @media screen and (max-width:768px){
-  .card {
+  header {
   width:100%;
-  background-color: blue;
+  height: 200px;
+  justify-content: center;
+  }
+
+  header ul {
+    margin-top: 5%;
+    text-align: center;
   }
 }
