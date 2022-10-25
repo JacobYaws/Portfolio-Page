@@ -23,13 +23,14 @@ For this project, I was tasked with creating a portfolio page for myself for fut
 
 ## Screenshots 
 
-  <img src="./assets/images/PortfolioPage.png"
+  <img src="https://github.com/JacobYaws/Portfolio-Page/blob/main/assets/images/PortfolioPage.png"
 
 ## Links  
 
 Github repository- https://github.com/JacobYaws/Portfolio-Page
+     -To download, navigate to the repository and click on the green 'Code' button. Copy the ssh link and clone it in a terminal by using 'git clone git@github.com:JacobYaws/Horiseon-Code-Refactor.git'
 
-Live webpage- 
+Live webpage- https://jacobyaws.github.io/Portfolio-Page/
 
 
 
