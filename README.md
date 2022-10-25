@@ -22,8 +22,7 @@ For this project, I was tasked with creating a portfolio page for myself for fut
 -CSS selectors have comments to give the user a quick explanation of what each selector does to the sheet.
 
 ## Screenshots 
-
-  <img src="https://github.com/JacobYaws/Portfolio-Page/blob/main/assets/images/PortfolioPage.png"
+<img src=https://github.com/JacobYaws/Portfolio-Page/blob/main/assets/images/PortfolioPage.png>
 
 ## Links  
 
