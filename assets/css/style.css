@@ -152,10 +152,17 @@ changed to a different value.*/
 
  #art2 {
     height: 15%;
-    background-image: url("../images/Horiseon-1.png");
+    background-image: url("../images/WineandDine.jpg");
     background-position: center;
     background-size:cover;
  }
+
+ #art3 {
+  height: 15%;
+  background-image: url("../images/Horiseon-1.png");
+  background-position: center;
+  background-size:cover;
+}
 
  .box2 h2, .box3 h2, .box4 h2, .box5 h2 {
     position: relative;
@@ -171,7 +178,7 @@ changed to a different value.*/
 
   #highlight {
     width: 85%;
-    background-image: url("../images/WineandDine.jpg");
+    background-image: url("../images/FastNFurious.jpg");
     height:500px;
     background-position: center;
     background-size:cover;
