@@ -151,13 +151,20 @@ changed to a different value.*/
  }
 
  #art2 {
+  height: 15%;
+  background-image: url("../images/FastNFurious.jpg");
+  background-position: center;
+  background-size:cover;
+}
+
+ #art3 {
     height: 15%;
     background-image: url("../images/WineandDine.jpg");
     background-position: center;
     background-size:cover;
  }
 
- #art3 {
+ #art4 {
   height: 15%;
   background-image: url("../images/Horiseon-1.png");
   background-position: center;
@@ -178,7 +185,7 @@ changed to a different value.*/
 
   #highlight {
     width: 85%;
-    background-image: url("../images/FastNFurious.jpg");
+    background-image: url("../images/BookStore.png");
     height:500px;
     background-position: center;
     background-size:cover;
