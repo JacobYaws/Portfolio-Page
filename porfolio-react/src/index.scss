@@ -1,0 +1,77 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow-x: hidden;
+  // overflow-y: hidden;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #A5795F;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  display: flex;
+  background-color: #A5795F;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+#main-link {
+  display: flex;
+  position: sticky;
+  margin-left: 2.5vw;
+  margin-right: 75.5vw;
+  padding: 1em;
+  align-items: baseline;
+}
+
+.secondary-link {
+  display: flex;
+  padding: 1em;
+  align-items: baseline;
+}
+
+#avi-about-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  // flex-wrap: wrap;
+}
+
+#about-me {
+  width: 100%;
+  margin: 1em;
+}
+
+.carousel {
+  height: 50vh;
+}
+
+.carousel-img {
+  width: fit-content;
+}
+
+.carousel-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: -3em;
+}
+
