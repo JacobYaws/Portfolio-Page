@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Image } from 'react-bootstrap';
 
 const ProjectResults = () => {
     const [projectsArray, setProjectsArray] = useState([]);
@@ -8,6 +8,7 @@ const ProjectResults = () => {
         gitFetch()
     }, [])
 
+    const excludes = [566133333, 552179195]; //Excluding the portfolio project (this project) and a forked repository without any code that cannot be set to private
     const gitFetch = async () => {
         const projObjectArray = [];
 
@@ -16,7 +17,10 @@ const ProjectResults = () => {
         .then(data => {
             console.log(data)
             const projects = data?.forEach((project) => {
-            const projObject = { name: project.name, id: project.id, url: project.html_url}
+            let projectId = project.id
+            const projObject = { name: project.name, id: project.id, url: project.html_url, description: project.description}
+            // if (project.id.find(excludes) )
+            // const idCheck = excludes.find((projectId) => projectId == excludes); // Start for filtering out unwanted projects going into the carousel. Looking into importing images and filtering out projects that way.
             projObjectArray.push(projObject);
             })
             setProjectsArray(projObjectArray)
@@ -28,20 +32,19 @@ const ProjectResults = () => {
 
     return (
         <div>
-            <Carousel>
-        {projectsArray.map((element) => (
-            // <div>{element.name}</div>
-           
+        <Carousel>
+            {projectsArray.map((element) => (
+                // <div>{element.name}</div>
+            
             <Carousel.Item key={element.id}>
-            <img className="carousel-img" src="https://placehold.jp/300x300.png" />
-              <Carousel.Caption>
-                <h3>{element.name}</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
-          </Carousel.Item>
-         
-        )
-
+                <Image className="carousel-img" src={`assets/${element.id}.png`} />
+                    <Carousel.Caption>
+                    <h3>{element.name}</h3>
+                    <p>{element.description}</p>
+                    </Carousel.Caption>
+            </Carousel.Item>
+            
+            )
         )}
         </Carousel>
         </div>
