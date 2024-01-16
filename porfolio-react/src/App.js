@@ -1,20 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { Container, Nav, Navbar, Col, Row, Button, Image, Carousel } from 'react-bootstrap';
-import ProjectContainer from './components/ProjectContainer';
+import ProjectResults from './components/ProjectResults';
 
-// const projects = [{name: "Billiard Game Tracker", url: "https://github.com/JacobYaws/Billiard-Game-Tracker"}]
-// const projects = async () => {
-//   let requestUrl = "https://api.github.com/users/JacobYaws/repos";
-
-//   await fetch(requestUrl)
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function(data) {
-//     console.log(data);
-//   })
-// }
 
 function App() {
   return (
@@ -37,33 +25,11 @@ function App() {
       </Container>
       <Container>
         %%%% Container 2 %%%%
-        <Carousel>
-          <Carousel.Item>
-            <img className="carousel-img" src="https://placehold.jp/300x300.png" />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="carousel-img" src="https://placehold.jp/300x300.png" />
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="carousel-img" src="https://placehold.jp/300x300.png" />
-              <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-        
+        <ProjectResults />
+
       </Container>
-      <ProjectContainer />
-      <header className="App-header">
+  
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -76,7 +42,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
