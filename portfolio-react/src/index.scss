@@ -1,5 +1,11 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+:root {
+  // --main-background: #222222;
+  --main-background: linear-gradient(to right, #111111, #2F2933);
+  // --secondary-background: #444444;
+  --secondary-background: #2A252E;
+}
 
 body {
   box-sizing: border-box;
@@ -14,7 +20,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #A5795F;
+  // background-image: linear-gradient(to right, #111111, #2F2933);
+  background-image: var(--main-background);
+  color: #eeeeee;
 }
 
 code {
@@ -22,12 +30,78 @@ code {
     monospace;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-background);
+  margin: 2em auto;
+  border-radius: 1em;
+  // align-items: stretch;
+  // justify-content: space-evenly;
+  // text-align: start;
+  // padding: 2em;
+}
+
+#avi-about-me {
+  display: flex;
+  // flex-direction: column;
+  background-color: var(--secondary-background);
+  margin: 2em auto;
+  border-radius: 1em;
+  align-items: stretch;
+  justify-content: space-evenly;
+  text-align: start;
+  // padding: 2em;
+}
+
+#avi-col {
+  display: flex;
+  flex-direction: row;
+  border-radius: 2em;
+  margin: 1em auto;
+  // padding: 2em;
+  // flex-wrap: wrap;
+  // margin-left: 1em auto;
+  background-attachment: fixed;
+  // background-image: linear-gradient(to right, #111111, #2F2933);
+  background-image: var(--main-background);
+  // background-color: transparent;
+  justify-content: center;
+  padding: 2em;
+}
+
+// #avi {
+//   display: flex;
+//   background-color: white;
+//   justify-content: center;
+//   text-align: center;
+// }
+
+#about-me {
+  flex-direction: column;
+  margin: 1em;
+
+  padding: 5em;
+  flex-grow: 2;
+  background-color: #111111;
+  border-radius: 2em;
+  // margin: 1em auto;
+  background-attachment: fixed;
+  // background-image: linear-gradient(to right, #111111, #2F2933);
+  background-attachment: fixed;
+  background-image: var(--main-background);
+}
+
 .navbar {
   display: flex;
-  background-color: #A5795F;
+  background-color: var(--secondary-background);
   align-items: center;
   justify-content: space-between;
   width: 100vw;
+}
+
+.nav-link {
+  color: #eeeeee;
 }
 
 #main-link {
@@ -45,33 +119,45 @@ code {
   align-items: baseline;
 }
 
-#avi-about-col {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  
-  // flex-wrap: wrap;
+#project-results {
+  padding: 2em;
+  margin: 2em auto;
+  background-image: var(--main-background);
+  background-attachment: fixed;
+  // background-color: var(--secondary-background);
+  border-radius: 1em;
 }
 
-#about-me {
-  width: 100%;
-  margin: 1em;
-}
+// #avi {
+//   display: inline-block;
+//   background-color: white;  
+//   // padding: 1em
+// }
 
 .carousel {
   height: 50vh;
+  margin: 2em auto;
 }
 
 .carousel-img {
-  width: fit-content;
+  width: 50%;
+  height: 40vh;
+  padding: 2em;
+}
+
+.carousel-item {
+  background-color: #aaaaaa;
 }
 
 .carousel-caption {
   display: flex;
+  width: 30%;
   align-items: baseline;
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  margin-bottom: -3em;
+  margin-bottom: 0.5em;
+  color: #777777;
 }
+
 

@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel, Image } from 'react-bootstrap';
+// import image616700957 from '../assets/616700957/Assign19screenshot1.png'
+// import image664301406 from '../assets/664301406/Assign19screenshot1.png'
 
 const ProjectResults = () => {
     const [projectsArray, setProjectsArray] = useState([]);
+    // const imageMap = new Map()
+    // imageMap.set(616700957, image616700957)
+    // imageMap.set(664301406, image)
+    
 
     useEffect(() => {
         gitFetch()
@@ -15,9 +21,11 @@ const ProjectResults = () => {
         const response = await (fetch(`https://api.github.com/users/JacobYaws/repos`)
         .then(response => response.json())
         .then(data => {
+           
             console.log(data)
             const projects = data?.forEach((project) => {
             let projectId = project.id
+            console.log(projectId)
             const projObject = { name: project.name, id: project.id, url: project.html_url, description: project.description}
             // if (project.id.find(excludes) )
             // const idCheck = excludes.find((projectId) => projectId == excludes); // Start for filtering out unwanted projects going into the carousel. Looking into importing images and filtering out projects that way.
@@ -37,10 +45,11 @@ const ProjectResults = () => {
                 // <div>{element.name}</div>
             
             <Carousel.Item key={element.id}>
-                <Image className="carousel-img" src={`assets/${element.id}.png`} />
+                {/* <Image className="carousel-img" src={imageMap.get(element.id)} /> */}
+                <Image className="carousel-img" src={require(`../assets/${element.id}/stock.png`)} />
                     <Carousel.Caption>
-                    <h3>{element.name}</h3>
-                    <p>{element.description}</p>
+                    <h3 className="caption-text">{element.name}</h3>
+                    <p className="caption-text">{element.description}</p>
                     </Carousel.Caption>
             </Carousel.Item>
             
