@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Carousel, Image } from 'react-bootstrap';
+import { Carousel, Image, Container } from 'react-bootstrap';
 // import image616700957 from '../assets/616700957/Assign19screenshot1.png'
 // import image664301406 from '../assets/664301406/Assign19screenshot1.png'
 
@@ -40,22 +40,24 @@ const ProjectResults = () => {
 
     return (
         <div>
+            <Container id="project-results">
+        <h3>Project Work</h3>
         <Carousel>
             {projectsArray.map((element) => (
                 // <div>{element.name}</div>
-            
+                
             <Carousel.Item key={element.id}>
                 {/* <Image className="carousel-img" src={imageMap.get(element.id)} /> */}
                 <Image className="carousel-img" src={require(`../assets/${element.id}/stock.png`)} />
                     <Carousel.Caption>
-                    <h3 className="caption-text">{element.name}</h3>
+                    <h2 className="caption-text">{element.name}</h2>
                     <p className="caption-text">{element.description}</p>
                     </Carousel.Caption>
             </Carousel.Item>
-            
             )
         )}
         </Carousel>
+        </Container>
         </div>
     )
 }

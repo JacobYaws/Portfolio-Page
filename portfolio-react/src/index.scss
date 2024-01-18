@@ -1,17 +1,17 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 :root {
-  // --main-background: #222222;
-  --main-background: linear-gradient(to right, #111111, #2F2933);
-  // --secondary-background: #444444;
-  --secondary-background: #2A252E;
+  --main-background: linear-gradient(to right, #111111, #222222);
+  --main-background-color: #111111;
+  // --secondary-background: #2A252E;
+  --secondary-background: #111111;
+
 }
 
 body {
   box-sizing: border-box;
   margin: 0 auto;
   overflow-x: hidden;
-  // overflow-y: hidden;
   display: flex;
   width: 100vw;
   justify-content: center;
@@ -20,8 +20,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background-image: linear-gradient(to right, #111111, #2F2933);
-  background-image: var(--main-background);
+  // background-image: var(--main-background);
+  background-color: var(--main-background-color);
   color: #eeeeee;
 }
 
@@ -36,58 +36,45 @@ code {
   background-color: var(--secondary-background);
   margin: 2em auto;
   border-radius: 1em;
-  // align-items: stretch;
-  // justify-content: space-evenly;
-  // text-align: start;
-  // padding: 2em;
 }
 
 #avi-about-me {
   display: flex;
-  // flex-direction: column;
+  // flex-basis: 100%;
+  gap: 3em;
+  // margin: 0 auto;
   background-color: var(--secondary-background);
-  margin: 2em auto;
   border-radius: 1em;
   align-items: stretch;
   justify-content: space-evenly;
   text-align: start;
-  // padding: 2em;
 }
 
 #avi-col {
   display: flex;
   flex-direction: row;
-  border-radius: 2em;
-  margin: 1em auto;
-  // padding: 2em;
-  // flex-wrap: wrap;
-  // margin-left: 1em auto;
+  border-radius: 1em;
+  margin: auto 0;
   background-attachment: fixed;
-  // background-image: linear-gradient(to right, #111111, #2F2933);
   background-image: var(--main-background);
-  // background-color: transparent;
   justify-content: center;
   padding: 2em;
 }
 
-// #avi {
-//   display: flex;
-//   background-color: white;
-//   justify-content: center;
-//   text-align: center;
-// }
-
 #about-me {
+  display: flex;
   flex-direction: column;
-  margin: 1em;
-
-  padding: 5em;
+  // gap: 1em;
+  align-items: start;
+  border-radius: 1em;
   flex-grow: 2;
+  // padding: 1em;
+
+  h2, h3, div {
+    padding: 0.5em 1em 0.5em 1em;
+  }
+  
   background-color: #111111;
-  border-radius: 2em;
-  // margin: 1em auto;
-  background-attachment: fixed;
-  // background-image: linear-gradient(to right, #111111, #2F2933);
   background-attachment: fixed;
   background-image: var(--main-background);
 }
@@ -120,44 +107,70 @@ code {
 }
 
 #project-results {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  h3 {
+    margin: auto 0 auto 0;
+    // background-color: var(--secondary-background);
+    height: 100%
+  }
+
+  div {
+    width: 100%;
+  }
+
+  .carousel {
+    height: 50vh;
+    margin: 2em auto;
+  }
+  
+  .carousel-img {
+    width: 100%;
+    margin: 0 auto;
+    // object-fit: cover;
+    height: inherit;
+    max-height: 100vh;
+    border-radius: 1em;
+    // padding: 2em ;
+  }
+  
+  .carousel-item {
+    // background-color: #aaaaaa;
+    width: 100%;
+    background-image: var(--main-background);
+    border-radius: 1em;
+    // margin: 2em;
+    // padding: 2em;
+    // background-attachment: fixed;
+    height: 50vh;
+  }
+  
+  .carousel-caption {
+    // margin: 0 auto;
+    background-color: #222222;
+    opacity: 50%;
+    border-radius: 1em;
+    width: fit-content;
+    max-width: 25em;
+    align-items: start;
+    text-align: start;
+    margin-left: -10%;
+    padding: 1em;
+  }
   padding: 2em;
-  margin: 2em auto;
+  margin: 2.5em auto;
   background-image: var(--main-background);
-  background-attachment: fixed;
-  // background-color: var(--secondary-background);
+  // background-attachment: fixed;
   border-radius: 1em;
 }
 
-// #avi {
-//   display: inline-block;
-//   background-color: white;  
-//   // padding: 1em
-// }
-
-.carousel {
-  height: 50vh;
-  margin: 2em auto;
-}
-
-.carousel-img {
-  width: 50%;
-  height: 40vh;
-  padding: 2em;
-}
-
-.carousel-item {
-  background-color: #aaaaaa;
-}
-
-.carousel-caption {
-  display: flex;
-  width: 30%;
-  align-items: baseline;
+.carousel-indicators {
   justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  margin-bottom: 0.5em;
-  color: #777777;
+  max-width: inherit;
+  margin: 0 auto;
 }
+
 
 
