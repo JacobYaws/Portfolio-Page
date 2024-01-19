@@ -27,13 +27,10 @@ const ProjectResults = () => {
             let projectId = project.id
             console.log(projectId)
             const projObject = { name: project.name, id: project.id, url: project.html_url, description: project.description}
-            // if (project.id.find(excludes) )
-            // const idCheck = excludes.find((projectId) => projectId == excludes); // Start for filtering out unwanted projects going into the carousel. Looking into importing images and filtering out projects that way.
             projObjectArray.push(projObject);
             })
             setProjectsArray(projObjectArray)
 
-        // setProjectsArray()
 
         }))
     }
@@ -47,7 +44,6 @@ const ProjectResults = () => {
                 // <div>{element.name}</div>
                 
             <Carousel.Item key={element.id}>
-                {/* <Image className="carousel-img" src={imageMap.get(element.id)} /> */}
                 <Image className="carousel-img" src={require(`../assets/${element.id}/stock.png`)} />
                     <Carousel.Caption>
                     <h2 className="caption-text">{element.name}</h2>

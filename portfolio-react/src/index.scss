@@ -45,6 +45,7 @@ code {
   background-color: var(--secondary-background);
   border-radius: 1em;
   align-items: stretch;
+  // flex-direction: column;
   justify-content: space-evenly;
   text-align: start;
 }
@@ -58,6 +59,13 @@ code {
   background-image: var(--main-background);
   justify-content: center;
   padding: 2em;
+}
+
+#avi {
+  display: block;
+  margin: auto;
+  max-width: 20em;
+  max-height: 20em;
 }
 
 #about-me {
@@ -219,6 +227,23 @@ code {
   }
 }
 
+#contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  #contact-list {
+    display: flex;
+    list-style-type: none;
+
+    li {
+      // margin-right: 1em;
+      // display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
+}
 
 
 

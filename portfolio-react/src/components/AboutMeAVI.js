@@ -6,7 +6,7 @@ const AboutMeAVI = () => {
         <Container id="avi-about-me">
       <Col id="avi-col">
         
-        <Image id="avi" src="https://placehold.jp/300x300.png" roundedCircle />
+        <Image id="avi" src={require("../assets/profile/IMG_2545.jpg")} />
       </Col>
 
         <Col id="about-me">
@@ -14,7 +14,9 @@ const AboutMeAVI = () => {
                 <h2>Jacob Yaws</h2>
                 <h3>About Me</h3>
             </div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div>My name is Jacob Yaws and I am looking to start a career in web development. 
+            I formerly worked as a team lead in transportation and a test technician for an autonomous yard truck company. 
+            I am eager to start applying my skills and learning new ones in the tech industry.</div>
         </Col>
         </Container>
     )

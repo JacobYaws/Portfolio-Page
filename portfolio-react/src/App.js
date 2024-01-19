@@ -4,6 +4,7 @@ import { Container, Nav, Navbar, Col, Row, Button, Image, Carousel, List } from 
 import ProjectResults from './components/ProjectResults';
 import AboutMeAVI from './components/AboutMeAVI';
 import SkillsEdu from './components/SkillsEdu';
+import ContactInfo from './components/ContactInfo';
 
 
 function App() {
@@ -21,13 +22,8 @@ function App() {
         <AboutMeAVI />
         <ProjectResults />
         <SkillsEdu />
-
-      <Container>
-        <h3 >Contact</h3>
-        <Container>
-          Contact Info
-        </Container>
-      </Container>
+        <ContactInfo />
+      
       </Container>
       
     </div>
