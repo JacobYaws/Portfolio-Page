@@ -1,7 +1,9 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 :root {
-  --main-background: linear-gradient(to right, #111111, #222222);
+  // --main-background: linear-gradient(to right, #111111, #222222);
+  --main-background: linear-gradient(#111111, #222222);
+
   --main-background-color: #111111;
   // --secondary-background: #2A252E;
   --secondary-background: #111111;
@@ -20,7 +22,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background-image: var(--main-background);
   background-color: var(--main-background-color);
   color: #eeeeee;
 }
@@ -40,9 +41,7 @@ code {
 
 #avi-about-me {
   display: flex;
-  // flex-basis: 100%;
   gap: 3em;
-  // margin: 0 auto;
   background-color: var(--secondary-background);
   border-radius: 1em;
   align-items: stretch;
@@ -63,12 +62,10 @@ code {
 
 #about-me {
   display: flex;
-  flex-direction: column;
-  // gap: 1em;
-  align-items: start;
+  flex-direction: row;
+  align-items: center;
   border-radius: 1em;
   flex-grow: 2;
-  // padding: 1em;
 
   h2, h3, div {
     padding: 0.5em 1em 0.5em 1em;
@@ -113,7 +110,6 @@ code {
 
   h3 {
     margin: auto 0 auto 0;
-    // background-color: var(--secondary-background);
     height: 100%
   }
 
@@ -129,26 +125,19 @@ code {
   .carousel-img {
     width: 100%;
     margin: 0 auto;
-    // object-fit: cover;
     height: inherit;
     max-height: 100vh;
     border-radius: 1em;
-    // padding: 2em ;
   }
   
   .carousel-item {
-    // background-color: #aaaaaa;
     width: 100%;
     background-image: var(--main-background);
     border-radius: 1em;
-    // margin: 2em;
-    // padding: 2em;
-    // background-attachment: fixed;
     height: 50vh;
   }
   
   .carousel-caption {
-    // margin: 0 auto;
     background-color: #222222;
     opacity: 50%;
     border-radius: 1em;
@@ -159,10 +148,24 @@ code {
     margin-left: -10%;
     padding: 1em;
   }
+
+  // .carousel-control-next-icon, .carousel-control-prev-icon {
+  //  background-color: #222222;
+  // //  opacity: 30%;
+  // }
+
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23808080' viewBox='0 0 8 12'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23808080' viewBox='0 0 8 12'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
   padding: 2em;
   margin: 2.5em auto;
   background-image: var(--main-background);
-  // background-attachment: fixed;
+  background-attachment: fixed;
   border-radius: 1em;
 }
 
@@ -171,6 +174,53 @@ code {
   max-width: inherit;
   margin: 0 auto;
 }
+
+#skills-edu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  #list-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    #education, #skills {
+      display: flex;
+      width: fit-content;
+      flex-direction: row;
+      align-items: center;
+      justify-content: start;
+      margin-left: 2em;
+      list-style-type: none;
+      border-left-style: solid;
+      border-width: 2px;
+      border-image: linear-gradient(to top, #483248, #807b8f);
+      border-image-slice: 1;
+      flex-wrap: nowrap;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        margin-right: 1em;
+      }
+
+      span {
+        font-size: 12px;
+        width: 50%;
+      }
+    }
+  }
+  
+  .sub-list {
+    font-size: 12px;
+  }
+}
+
+
+
 
 
 
