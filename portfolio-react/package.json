@@ -2,7 +2,7 @@
   "name": "portfolio-react",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
-  "homepage": "https://github.com/JacobYaws/Portfolio-Page",
+  "homepage": "https://jacobyaws.github.io/Portfolio-Page/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
