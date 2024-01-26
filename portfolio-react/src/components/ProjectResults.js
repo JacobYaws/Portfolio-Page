@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel, Image, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 // import image616700957 from '../assets/616700957/Assign19screenshot1.png'
 // import image664301406 from '../assets/664301406/Assign19screenshot1.png'
 
@@ -43,8 +44,10 @@ const ProjectResults = () => {
             {projectsArray.map((element) => (
                 // <div>{element.name}</div>
                 
-            <Carousel.Item key={element.id}>
+            <Carousel.Item key={element.id} >
+                <Link to={element.url}>
                 <Image className="carousel-img" src={require(`../assets/${element.id}/stock.png`)} />
+                </Link>
                     <Carousel.Caption>
                     <h2 className="caption-text">{element.name}</h2>
                     <p className="caption-text">{element.description}</p>
