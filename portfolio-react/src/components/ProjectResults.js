@@ -39,7 +39,7 @@ const ProjectResults = () => {
     return (
         <div>
             <Container id="project-results">
-        <h3>Projects</h3>
+        <h3>Personal Work</h3>
         <Carousel>
             {projectsArray.map((element) => (
                 // <div>{element.name}</div>
